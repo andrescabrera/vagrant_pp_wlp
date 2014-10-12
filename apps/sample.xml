@@ -1,0 +1,31 @@
+<server description="liberty1">
+
+    <featureManager>
+	   <feature>localConnector-1.0</feature>
+        <feature>jsp-2.2</feature>
+        <feature>jdbc-4.0</feature>
+    </featureManager>
+
+ <httpEndpoint id="defaultHttpEndpoint"
+                 host="*"
+                 httpPort="9080">
+          <tcpOptions soReuseAddr="true" />
+     </httpEndpoint>
+
+	
+    <library id="oracle-lib">
+        <fileset dir="lib" includes="ojdbc5_g.jar"/>
+    </library>
+
+	<!--
+    <dataSource jndiName="jdbc/db" jdbcDriverRef="oracle-driver" type="javax.sql.DataSource">
+        <jdbcDriver libraryRef="oracle-lib" id="oracle-driver"/>
+        <connectionManager numConnectionsPerThreadLocal="10" id="ConnectionManager" minPoolSize="1"/>
+        <properties user="user" password="password"
+                    url="jdbc:oracle:thin:@//db-server:1521/db"/>
+    </dataSource>
+	-->
+	
+	<application name="sample" id="sample" location="sample.war" type="war"/>
+
+</server>
