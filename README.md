@@ -32,7 +32,7 @@ Websphere Liberty Profile Module example.
 
 > cd vagrant_pp_wlp
 
-> git clone https://github.com/WASdev/ci.puppet.wlp wlp
+> git clone https://github.com/WASdev/ci.puppet.wlp modules/wlp
 
 ##### 2- Box Download
 
